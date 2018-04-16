@@ -63,6 +63,14 @@ public class FlinkStreamTest {
         }
     }
 
+    /**
+     * collectd -> kafka -> flink(stream window & aggregation) -> ohter topic
+     *
+     * <p>arguments :
+     * 	--input-topic COLLECTD_DATA --output-topic ainory-flink-stream-1 --bootstrap.servers spanal-app:9092 --zookeeper.connect spanal-app:2181/kafka --group.id ainory-consummer --auto.offset.reset latest
+     *
+     * @param args
+     */
     public void WindowStreamTest(String[] args){
         try{
             final ParameterTool parameterTool = ParameterTool.fromArgs(args);
@@ -168,7 +176,6 @@ public class FlinkStreamTest {
                     parameterTool.getProperties()));
 
             env.execute("WindowStreamTest for ainory");
-
 
         }catch (Exception e){
             e.printStackTrace();
