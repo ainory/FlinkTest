@@ -20,7 +20,7 @@
         <flink.version>1.4.2</flink.version>
         <scala.binary.version>2.11</scala.binary.version>
         <apache-commons-lang.version>3.5</apache-commons-lang.version>
-        <jackson-core.version>2.13.4.1</jackson-core.version>
+        <jackson-core.version>2.13.4.2</jackson-core.version>
     </properties>
 
     <dependencies>
